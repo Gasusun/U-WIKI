@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <title>Login page</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Tạo tài khoản </h1>
+                <span>Email</span>
+                 <input type="email" placeholder="Email">
+                <span>Password</span>
+                <input type="password" placeholder="Password">
+                <button>Tạo tài khoản</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Đăng nhập</h1>
+                <span>Email</span>
+                <input type="email" placeholder="Email">
+                <span>Password</span>
+                <input type="password" placeholder="Password">
+                  <button>Đăng nhập</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Xin Chào 36</h1>
+                    <p>Bạn đã có tài khoản? Bấm vào nút này!</p>
+                    <button class="hidden" id="login">Đăng nhập</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Xin Chào 36</h1>
+                    <p>Chưa có tài khoản? Bấm vào nút này!</p>
+                    <button class="hidden" id="register">Đăng kí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
