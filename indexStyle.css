@@ -554,7 +554,7 @@ a {
 .map-legend {
     position: absolute;
 
-    left: calc(50% + px);
+    left: calc(50% + 300px);
 
     top: 60px;
 
@@ -634,7 +634,7 @@ a {
     .map-legend {
         position: static;
 
-        margin-left: px;
+        margin-left: 35px;
 
         margin-top: 60px;
     }
@@ -669,7 +669,7 @@ a {
     position: absolute;
 
     top: 75px;
-    left: calc(50% + px);
+    left: calc(50% + 345px);
 
     display: flex;
     flex-direction: column;
