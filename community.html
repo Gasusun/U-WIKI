@@ -14,6 +14,7 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
+    <script src="community.js" defer></script>
 </head>
 
 <body>
@@ -144,11 +145,45 @@
 
             </nav>
 
-        </aside>
+                </aside>
+
+        <!-- ================= COMMUNITY CONTENT ================= -->
+
+        <main class="community-content">
+
+            <!-- Filter -->
+            <div class="post-filter">
+
+                <button class="filter-btn active">
+                    <i class="fa-solid fa-clock"></i>
+                    New
+                </button>
+
+                <button class="filter-btn">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    Top
+                </button>
+
+                <button class="filter-btn">
+                    <i class="fa-solid fa-fire"></i>
+                    Hot
+                </button>
+
+                <button class="filter-btn">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Closed
+                </button>
+
+            </div>
 
 
-        
+            <!-- Posts -->
+            <div class="posts-container" id="posts-container">
+            <!-- Bài viết sẽ được JavaScript tải từ database vào đây -->
+            </div>
 
+        </main>
+ 
     </div>
 
 </div>
