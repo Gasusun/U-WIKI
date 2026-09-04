@@ -19,7 +19,6 @@ $stmt->bind_param("i", $userId);
 $stmt->execute();
 
 $result = $stmt->get_result();
-
 $user = $result->fetch_assoc();
 
 $avatar = !empty($user['avatar'])
@@ -97,7 +96,7 @@ $avatar = !empty($user['avatar'])
                     <span>Home</span>
                 </a>
 
-                <a href="map.html" class="menu-item">
+                <a href="map_users.php" class="menu-item">
                     <i class="fa-solid fa-map"></i>
                     <span>Bản đồ trường</span>
                 </a>
@@ -107,7 +106,7 @@ $avatar = !empty($user['avatar'])
                     <span>Accounts</span>
                 </a>
 
-                <a href="course.html" class="menu-item">
+                <a href="course_users.php" class="menu-item">
                     <i class="fa-solid fa-book-open"></i>
                     <span>Môn học</span>
                 </a>
