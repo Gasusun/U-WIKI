@@ -225,7 +225,7 @@ unset($_SESSION['account_message']);
                 </a>
 
 
-                <a href="community.html" class="menu-item">
+                <a href="community_users.php" class="menu-item">
 
                     <i class="fa-solid fa-users"></i>
 
