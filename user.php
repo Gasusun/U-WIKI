@@ -1,3 +1,32 @@
+<?php
+session_start();
+require_once 'config.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+$userId = $_SESSION['user_id'];
+
+$stmt = $conn->prepare("
+    SELECT id, name, email, phone, avatar
+    FROM users
+    WHERE id = ?
+");
+
+$stmt->bind_param("i", $userId);
+$stmt->execute();
+
+$result = $stmt->get_result();
+
+$user = $result->fetch_assoc();
+
+$avatar = !empty($user['avatar'])
+    ? $user['avatar']
+    : 'images/avatar.png';
+
+?>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -39,17 +68,17 @@
                 >
             </div>
 
-            <!-- Login -->
-            <a href="login.html" class="header-link">
-                <i class="fa-solid fa-lock"></i>
-                <span>login</span>
-            </a>
-
-            <!-- Sign Up -->
-            <a href="login.html" class="header-link">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                <span>Sign Up</span>
-            </a>
+        <!-- User Avatar -->
+        <a href="account.php" class="user-avatar-link">
+        <img src="<?= htmlspecialchars($avatar) ?>"
+            alt="Avatar"
+            style="
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            object-fit:cover;
+            cursor:pointer;">
+        </a>
 
         </div>
     </header>
@@ -69,11 +98,11 @@
                 </a>
 
                 <a href="map.html" class="menu-item">
-                    <i class="fa-solid fa-map></i>
+                    <i class="fa-solid fa-map"></i>
                     <span>Bản đồ trường</span>
                 </a>
 
-                <a href="login.html" class="menu-item">
+                <a href="account.php" class="menu-item">
                     <i class="fa-solid fa-user"></i>
                     <span>Accounts</span>
                 </a>
