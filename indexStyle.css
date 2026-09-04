@@ -1,1253 +1,233 @@
-/* =========================
-   RESET
-========================= */
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <title>NTTU - Home</title>
 
-html,
-body {
-    width: 100%;
-    min-height: 100%;
-}
+    <link rel="stylesheet" href="indexStyle.css">
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f5f7;
-    color: #333;
-}
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+<body>
 
+<div class="page">
 
-/* =========================
-   PAGE
-========================= */
+    <!-- ================= HEADER ================= -->
+    <header class="header">
 
-.page {
-    width: 100%;
-    min-height: 100vh;
-}
+        <!-- Logo -->
+        <div class="logo-area">
+            <img src="images/logo.png" alt="NTTU Logo">
+        </div>
 
+        <!-- Header right -->
+        <div class="header-right">
 
-/* =========================
-   HEADER
-========================= */
+            <!-- Search -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    placeholder="Search for something"
+                >
+            </div>
 
-.header {
-    height: 70px;
+            <!-- Login -->
+            <a href="login.php" class="header-link">
+                <i class="fa-solid fa-lock"></i>
+                <span>login</span>
+            </a>
 
-    background: #2948a5;
+            <!-- Sign Up -->
+            <a href="login.php" class="header-link">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span>Sign Up</span>
+            </a>
 
-    display: flex;
-    align-items: center;
+        </div>
+    </header>
 
-    color: white;
-}
 
+    <!-- ================= MAIN ================= -->
+    <div class="main">
 
-/* Logo */
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
 
-.logo-area {
-    width: 173px;
-    height: 70px;
+            <nav class="menu">
 
-    border-right: 2px solid rgba(255, 255, 255, 0.25);
+                <a href="#" class="menu-item active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+                <a href="map.html" class="menu-item">
+                    <i class="fa-solid fa-map"></i>
+                    <span>Bản đồ trường</span>
+                </a>
 
-.logo-area img {
-    width: 75px;
-    height: 65px;
+                <a href="login.php" class="menu-item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Accounts</span>
+                </a>
 
-    object-fit: contain;
-}
+                <a href="course.html" class="menu-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Môn học</span>
+                </a>
 
+                <a href="community.php" class="menu-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Cộng đồng</span>
+                </a>
 
-/* Header right */
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-ranking-star"></i>
+                    <span>Xếp hạng</span>
+                </a>
 
-.header-right {
-    flex: 1;
+                <a href="#" class="menu-item">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Setting</span>
+                </a>
 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+            </nav>
 
-    gap: 25px;
+        </aside>
 
-    padding-right: 25px;
-}
 
+        <!-- ================= CONTENT ================= -->
+        <main class="content">
 
-/* Search */
+            <!-- Banner -->
+            <section class="banner">
+                <img
+                    src="images/banner.webp"
+                    alt="Điểm chuẩn trúng tuyển"
+                >
+            </section>
 
-.search-box {
-    width: 200px;
-    height: 34px;
 
-    background: white;
+            <!-- News -->
+            <section class="news-container">
 
-    border-radius: 20px;
+                <!-- ===== MAIN NEWS ===== -->
+                <article class="main-news">
 
-    display: flex;
-    align-items: center;
+                    <img
+                        src="images/xettuyen.webp"
+                        alt="Xét tuyển bổ sung"
+                    >
 
-    padding: 0 12px;
+                    <h2>
+                        Thêm cơ hội học tại Trường ĐH Nguyễn Tất Thành:
+                        Đăng ký xét tuyển bổ sung từ ngày 13/8/2026
+                    </h2>
 
-    color: #9aa4b5;
-}
+                    <p class="description">
+                        NTTU – Theo thông tin từ Hội đồng tuyển sinh Trường
+                        ĐH Nguyễn Tất Thành, Nhà trường sẽ tiến hành xét tuyển
+                        bổ sung các chương trình đào tạo...
+                    </p>
 
-.search-box i {
-    font-size: 13px;
-    margin-right: 9px;
-}
+                    <span class="date">
+                        11/08/2026
+                    </span>
 
-.search-box input {
-    width: 100%;
+                </article>
 
-    border: none;
-    outline: none;
 
-    font-size: 11px;
+                <!-- ===== SIDE NEWS ===== -->
+                <div class="side-news">
 
-    color: #555;
-}
+                    <!-- News 1 -->
+                    <article class="news-item">
 
-.search-box input::placeholder {
-    color: #a7b0c0;
-}
+                        <img
+                            src="images/mnong.webp"
+                            alt=""
+                        >
 
+                        <div class="news-info">
 
-/* Login / Signup */
+                            <h3>
+                                Từ buôn làng Tây Nguyên đến giảng đường NTTU:
+                                Hành trình rực rỡ của cô gái "M'nông"
+                            </h3>
 
-.header-link {
-    display: flex;
-    align-items: center;
+                            <span class="date">
+                                18/08/2026
+                            </span>
 
-    gap: 7px;
+                        </div>
 
-    font-size: 13px;
+                    </article>
 
-    color: white;
 
-    transition: 0.2s;
-}
+                    <!-- News 2 -->
+                    <article class="news-item">
 
-.header-link i {
-    font-size: 14px;
-}
+                        <img
+                            src="images/sinhdoi.webp"
+                            alt=""
+                        >
 
-.header-link:hover {
-    opacity: 0.7;
-}
+                        <div class="news-info">
 
+                            <h3>
+                                Cùng lăn lên trong vòng tay mẹ và bà,
+                                hai anh em sinh đôi cùng cho NTTU bắt đầu
+                                hành trình mới
+                            </h3>
 
-/* =========================
-   MAIN
-========================= */
+                            <span class="date">
+                                18/08/2026
+                            </span>
 
-.main {
-    display: flex;
+                        </div>
 
-    min-height: calc(100vh - 70px);
-}
+                    </article>
 
 
-/* =========================
-   SIDEBAR
-========================= */
+                    <!-- News 3 -->
+                    <article class="news-item">
 
-.sidebar {
-    width: 173px;
+                        <img
+                            src="images/hoithao.webp"
+                            alt=""
+                        >
 
-    background: white;
+                        <div class="news-info">
 
-    flex-shrink: 0;
-}
+                            <h3>
+                                Hội thảo kết nối cựu sinh viên
+                                "Những sắc màu thực tiễn ngành Kỹ thuật xét nghiệm"
+                            </h3>
 
+                            <span class="date">
+                                17/08/2026
+                            </span>
 
-/* Menu */
+                        </div>
 
-.menu {
-    padding-top: 10px;
-}
+                    </article>
 
+                </div>
 
-/* Menu item */
+            </section>
 
-.menu-item {
-    height: 52px;
+        </main>
 
-    display: flex;
-    align-items: center;
+    </div>
 
-    padding-left: 35px;
+</div>
 
-    gap: 18px;
-
-    color: #aaa;
-
-    font-size: 13px;
-
-    position: relative;
-
-    transition: 0.2s;
-}
-
-.menu-item i {
-    width: 16px;
-
-    text-align: center;
-
-    font-size: 16px;
-}
-
-
-/* Hover */
-
-.menu-item:hover {
-    color: #4169e1;
-
-    background: #f5f7ff;
-}
-
-
-/* Active */
-
-.menu-item.active {
-    color: #3564ff;
-
-    background: #f8f9ff;
-}
-
-.menu-item.active::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 8px;
-    bottom: 8px;
-
-    width: 4px;
-
-    background: #3564ff;
-
-    border-radius: 0 4px 4px 0;
-}
-
-
-/* =========================
-   CONTENT
-========================= */
-
-.content {
-    flex: 1;
-
-    min-width: 0;
-
-    background: #f5f6f8;
-}
-
-
-/* =========================
-   BANNER
-========================= */
-
-.banner {
-    width: 100%;
-
-    height: 325px;
-
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-/* =========================
-   NEWS CONTAINER
-========================= */
-
-.news-container {
-    margin: 15px;
-
-    padding: 5px;
-
-    background: white;
-
-    display: grid;
-
-    grid-template-columns: 1.15fr 1fr;
-
-    gap: 18px;
-}
-
-
-/* =========================
-   MAIN NEWS
-========================= */
-
-.main-news {
-    padding: 0 0 8px 0;
-}
-
-.main-news img {
-    width: 100%;
-
-    height: 215px;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-.main-news h2 {
-    font-size: 17px;
-
-    line-height: 1.35;
-
-    margin: 12px 0 8px;
-
-    color: #222;
-}
-
-.description {
-    font-size: 12px;
-
-    line-height: 1.5;
-
-    color: #555;
-
-    margin-bottom: 8px;
-}
-
-
-/* =========================
-   DATE
-========================= */
-
-.date {
-    display: block;
-
-    font-size: 11px;
-
-    color: #c8a83b;
-
-    margin-top: 7px;
-}
-
-
-/* =========================
-   SIDE NEWS
-========================= */
-
-.side-news {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-}
-
-
-/* Individual news */
-
-.news-item {
-    display: grid;
-
-    grid-template-columns: 180px 1fr;
-
-    gap: 13px;
-
-    min-height: 95px;
-}
-
-.news-item img {
-    width: 180px;
-    height: 95px;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-/* News text */
-
-.news-info {
-    padding-right: 5px;
-}
-
-.news-info h3 {
-    font-size: 13px;
-
-    line-height: 1.35;
-
-    color: #333;
-}
-
-.news-info .date {
-    margin-top: 10px;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-
-    .sidebar {
-        width: 70px;
-    }
-
-    .logo-area {
-        width: 70px;
-    }
-
-    .menu-item {
-        justify-content: center;
-
-        padding-left: 0;
-    }
-
-    .menu-item span {
-        display: none;
-    }
-
-    .header-right {
-        gap: 12px;
-    }
-
-    .search-box {
-        width: 160px;
-    }
-
-    .news-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .header {
-        height: 60px;
-    }
-
-    .logo-area {
-        height: 60px;
-        width: 60px;
-    }
-
-    .logo-area img {
-        width: 55px;
-    }
-
-    .header-link span {
-        display: none;
-    }
-
-    .search-box {
-        width: 140px;
-    }
-
-    .banner {
-        height: 200px;
-    }
-
-    .news-item {
-        grid-template-columns: 120px 1fr;
-    }
-
-    .news-item img {
-        width: 120px;
-        height: 75px;
-    }
-}
-/* =========================
-   PROFILE AVATAR
-========================= */
-
-.profile-avatar {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
-
-    overflow: hidden;
-
-    margin-right: 0;
-}
-
-.profile-avatar img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-
-/* =========================
-   MAP PAGE
-========================= */
-
-.map-content {
-    background: #f4f6f9;
-
-    padding: 14px 25px;
-
-    overflow: hidden;
-}
-
-
-/* Map wrapper */
-
-.map-wrapper {
-    width: 100%;
-
-    min-height: calc(100vh - 98px);
-
-    display: flex;
-
-    justify-content: center;
-    align-items: flex-start;
-
-    position: relative;
-}
-
-
-/* Campus map */
-
-.campus-map {
-    width: min(575px, 65%);
-
-    height: auto;
-
-    display: block;
-
-    object-fit: contain;
-}
-
-
-/* =========================
-   LEGEND
-========================= */
-
-.map-legend {
-    position: absolute;
-
-    left: calc(50% + 300px);
-
-    top: 60px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-}
-
-
-/* Legend item */
-
-.legend-item {
-    display: flex;
-
-    align-items: center;
-
-    gap: 16px;
-
-    min-width: 150px;
-
-    font-size: 14px;
-
-    color: #222;
-}
-
-
-/* Legend square */
-
-.legend-color {
-    width: 42px;
-    height: 40px;
-
-    border-radius: 7px;
-
-    flex-shrink: 0;
-}
-
-
-/* Ground floor */
-
-.legend-color.tret {
-    background: #4296cf;
-}
-
-
-/* First floor */
-
-.legend-color.tang1 {
-    background: #f26870;
-}
-
-
-/* Stairs */
-
-.legend-color.stair {
-    background:
-        repeating-linear-gradient(
-            90deg,
-            #f26870 0px,
-            #f26870 1px,
-            white 1px,
-            white 4px
-        );
-
-    border: 1px solid #f26870;
-}
-
-
-/* =========================
-   RESPONSIVE MAP
-========================= */
-
-@media (max-width: 1000px) {
-
-    .map-legend {
-        position: static;
-
-        margin-left: 35px;
-
-        margin-top: 60px;
-    }
-
-    .map-wrapper {
-        align-items: flex-start;
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .map-content {
-        padding: 10px;
-    }
-
-    .map-wrapper {
-        flex-direction: column;
-
-        align-items: center;
-    }
-
-    .campus-map {
-    width: 500px;
-    height: auto;
-    display: block;
-    object-fit: contain;
-    }
-
-    .map-legend {
-    position: absolute;
-
-    top: 75px;
-    left: calc(50% + 345px);
-
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-    .legend-item {
-        min-width: auto;
-
-        font-size: 12px;
-    }
-
-    .legend-color {
-        width: 30px;
-        height: 30px;
-    }
-
-}
-/* =========================
-   COMMUNITY PAGE
-========================= */
-
-.community-content {
-    flex: 1;
-    min-width: 0;
-
-    background: #f5f6f8;
-
-    padding: 30px 38px;
-
-    overflow-y: auto;
-}
-
-
-/* =========================
-   POST FILTER
-========================= */
-
-.post-filter {
-    display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    margin-bottom: 25px;
-}
-
-.filter-btn {
-    border: none;
-
-    background: #e9ebee;
-
-    color: #888;
-
-    padding: 7px 14px;
-
-    border-radius: 20px;
-
-    font-size: 12px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-.filter-btn i {
-    margin-right: 4px;
-}
-
-.filter-btn:hover {
-    background: #dfe3e8;
-
-    color: #555;
-}
-
-.filter-btn.active {
-    background: #3564ff;
-
-    color: white;
-}
-
-
-/* =========================
-   POSTS
-========================= */
-
-.posts-container {
-    width: 100%;
-
-    max-width: 850px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-}
-
-
-/* =========================
-   POST CARD
-========================= */
-
-.post-card {
-    background: white;
-
-    border: 1px solid #e5e5e5;
-
-    border-radius: 5px;
-
-    padding: 20px 22px;
-
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
-
-    transition: 0.2s;
-}
-
-.post-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-    transform: translateY(-1px);
-}
-
-
-/* =========================
-   POST HEADER
-========================= */
-
-.post-header {
-    display: flex;
-
-    align-items: center;
-
-    position: relative;
-}
-
-.post-avatar {
-    width: 38px;
-    height: 38px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
-    margin-right: 12px;
-}
-
-.post-user {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 3px;
-}
-
-.post-user strong {
-    font-size: 13px;
-
-    color: #333;
-}
-
-.post-user span {
-    font-size: 10px;
-
-    color: #aaa;
-}
-
-
-/* More button */
-
-.post-more {
-    margin-left: auto;
-
-    border: none;
-
-    background: transparent;
-
-    color: #888;
-
-    font-size: 16px;
-
-    cursor: pointer;
-
-    padding: 5px 8px;
-}
-
-.post-more:hover {
-    color: #333;
-}
-
-
-/* =========================
-   POST TITLE
-========================= */
-
-.post-title {
-    font-size: 15px;
-
-    color: #222;
-
-    margin-top: 14px;
-
-    margin-bottom: 8px;
-
-    line-height: 1.4;
-}
-
-
-/* =========================
-   POST DESCRIPTION
-========================= */
-
-.post-description {
-    font-size: 12px;
-
-    line-height: 1.6;
-
-    color: #777;
-
-    margin-bottom: 15px;
-}
-
-
-/* =========================
-   POST FOOTER
-========================= */
-
-.post-footer {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 15px;
-}
-
-
-/* =========================
-   TAGS
-========================= */
-
-.post-tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 6px;
-}
-
-.post-tags span {
-    background: #eeeeee;
-
-    color: #999;
-
-    padding: 5px 9px;
-
-    border-radius: 4px;
-
-    font-size: 10px;
-}
-
-
-/* =========================
-   POST STATS
-========================= */
-
-.post-stats {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    color: #999;
-
-    font-size: 11px;
-
-    white-space: nowrap;
-}
-
-.post-stats span {
-    display: flex;
-
-    align-items: center;
-
-    gap: 5px;
-}
-
-.post-stats i {
-    font-size: 11px;
-}
-.loading,
-.no-post {
-    text-align: center;
-
-    padding: 40px;
-
-    color: #999;
-
-    font-size: 13px;
-}
-
-
-.error-message {
-    background: white;
-
-    padding: 40px;
-
-    text-align: center;
-
-    color: #999;
-
-    border-radius: 5px;
-}
-
-.error-message i {
-    font-size: 25px;
-
-    margin-bottom: 10px;
-
-    display: block;
-}
-/* =========================
-   COURSE PAGE
-========================= */
-
-.course-content {
-    flex: 1;
-    min-width: 0;
-
-    background: #f5f6f8;
-
-    padding: 30px 38px;
-
-    overflow-y: auto;
-}
-
-
-/* =========================
-   COURSE HEADER
-========================= */
-
-.course-header {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 28px;
-}
-
-.course-header h1 {
-    font-size: 25px;
-
-    color: #222;
-
-    margin-bottom: 7px;
-}
-
-.course-header p {
-    font-size: 13px;
-
-    color: #888;
-}
-
-
-/* =========================
-   COURSE SEARCH
-========================= */
-
-.course-search {
-    width: 230px;
-    height: 38px;
-
-    background: white;
-
-    border: 1px solid #e3e3e3;
-
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 14px;
-
-    color: #999;
-}
-
-.course-search i {
-    font-size: 13px;
-
-    margin-right: 9px;
-}
-
-.course-search input {
-    width: 100%;
-
-    border: none;
-
-    outline: none;
-
-    font-size: 12px;
-
-    color: #444;
-}
-
-.course-search input::placeholder {
-    color: #aaa;
-}
-
-
-/* =========================
-   COURSE GRID
-========================= */
-
-.course-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-
-/* =========================
-   COURSE CARD
-========================= */
-
-.course-card {
-    background: white;
-
-    border: 1px solid #e5e5e5;
-
-    border-radius: 10px;
-
-    padding: 22px;
-
-    min-height: 205px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    transition: 0.25s;
-
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-}
-
-.course-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.09);
-
-    border-color: #d5ddff;
-}
-
-
-/* =========================
-   COURSE ICON
-========================= */
-
-.course-icon {
-    width: 48px;
-    height: 48px;
-
-    border-radius: 10px;
-
-    background: #eef2ff;
-
-    color: #3564ff;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 16px;
-}
-
-.course-icon i {
-    font-size: 21px;
-}
-
-
-/* =========================
-   COURSE INFO
-========================= */
-
-.course-info {
-    flex: 1;
-}
-
-.course-info h3 {
-    font-size: 15px;
-
-    line-height: 1.4;
-
-    color: #222;
-
-    margin-bottom: 7px;
-}
-
-.course-info p {
-    font-size: 11px;
-
-    color: #999;
-}
-
-
-/* =========================
-   COURSE BUTTON
-========================= */
-
-.course-button {
-    margin-top: 18px;
-
-    height: 34px;
-
-    background: #3564ff;
-
-    color: white;
-
-    border-radius: 5px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 8px;
-
-    font-size: 11px;
-
-    transition: 0.2s;
-}
-
-.course-button:hover {
-    background: #294fcf;
-}
-
-.course-button i {
-    font-size: 10px;
-}
-/* =========================
-   RESPONSIVE COURSE
-========================= */
-
-@media (max-width: 1100px) {
-
-    .course-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .course-content {
-        padding: 20px 15px;
-    }
-
-    .course-header {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 15px;
-    }
-
-    .course-search {
-        width: 100%;
-    }
-
-    .course-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
+</body>
+</html>
