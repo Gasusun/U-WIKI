@@ -111,7 +111,7 @@ $avatar = !empty($user['avatar'])
                     <span>Môn học</span>
                 </a>
 
-                <a href="community.html" class="menu-item">
+                <a href="community_users.php" class="menu-item">
                     <i class="fa-solid fa-users"></i>
                     <span>Cộng đồng</span>
                 </a>
