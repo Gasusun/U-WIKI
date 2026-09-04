@@ -71,8 +71,8 @@ $avatar = !empty($user['avatar'])
                 >
 
             </div>
-        </div>
-        <!-- User Avatar -->
+
+          <!-- User Avatar -->
         <a href="account.php" class="user-avatar-link">
         <img src="<?= htmlspecialchars($avatar) ?>"
             alt="Avatar"
@@ -140,7 +140,7 @@ $avatar = !empty($user['avatar'])
 
 
                 <!-- Community -->
-                <a href="community.html" class="menu-item">
+                <a href="community_users.php" class="menu-item">
 
                     <i class="fa-solid fa-users"></i>
 
