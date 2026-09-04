@@ -198,7 +198,7 @@ unset($_SESSION['account_message']);
 
                 </a>
 
-                <a href="map.html" class="menu-item">
+                <a href="map_users.php" class="menu-item">
 
                     <i class="fa-solid fa-map"></i>
 
@@ -216,7 +216,7 @@ unset($_SESSION['account_message']);
                 </a>
 
 
-                <a href="course.html" class="menu-item">
+                <a href="course_users.php" class="menu-item">
 
                     <i class="fa-solid fa-book-open"></i>
 
