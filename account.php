@@ -234,12 +234,9 @@ unset($_SESSION['account_message']);
                 </a>
 
 
-                <a href="#" class="menu-item">
-
+                <a href="ranking_user.php" class="menu-item">
                     <i class="fa-solid fa-ranking-star"></i>
-
                     <span>Xếp hạng</span>
-
                 </a>
 
 
