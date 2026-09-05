@@ -444,70 +444,43 @@ $avatar =
 
 
 <div class="main">
-
-
 <aside class="sidebar">
 
 <nav class="menu">
 
 
-<a
-    href="user.php"
-    class="menu-item"
->
-
+<a href="user.php" class="menu-item">
 <i class="fa-solid fa-house"></i>
-
 <span>Home</span>
-
 </a>
 
 
-<a
-    href="map_users.php"
-    class="menu-item"
->
-
+<a href="map_users.php" class="menu-item">
 <i class="fa-solid fa-map"></i>
-
 <span>Bản đồ trường</span>
-
 </a>
 
 
-<a
-    href="account.php"
-    class="menu-item"
->
-
+<a href="account.php" class="menu-item">
 <i class="fa-solid fa-user"></i>
-
 <span>Accounts</span>
-
 </a>
 
 
-<a
-    href="course_users.php"
-    class="menu-item"
->
-
+<a href="course_users.php" class="menu-item">
 <i class="fa-solid fa-book-open"></i>
-
 <span>Môn học</span>
-
 </a>
 
 
-<a
-    href="community_users.php"
-    class="menu-item active"
->
-
+<a href="community_user.php" class="menu-item active">
 <i class="fa-solid fa-users"></i>
-
 <span>Cộng đồng</span>
-
+</a>
+  
+<a href="ranking_users.php" class="menu-item">
+<i class="fa-solid fa-ranking-star"></i>
+<span>Xếp hạng</span>
 </a>
 
 
