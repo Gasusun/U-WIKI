@@ -301,6 +301,12 @@ session_start();
                     <i class="fa-solid fa-users"></i>
                     <span>Cộng đồng</span>
                 </a>
+                            
+                <a href="ranking_results.php" class="menu-item">
+                    <i class="fa-solid fa-ranking-star"></i>
+                    <span>Xếp hạng</span>
+
+                </a>
 
             </nav>
 
