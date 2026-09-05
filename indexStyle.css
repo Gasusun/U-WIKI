@@ -547,83 +547,6 @@ a {
 }
 
 
-/* =========================
-   LEGEND
-========================= */
-
-.map-legend {
-    position: absolute;
-
-    left: calc(50% + 300px);
-
-    top: 60px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-}
-
-
-/* Legend item */
-
-.legend-item {
-    display: flex;
-
-    align-items: center;
-
-    gap: 16px;
-
-    min-width: 150px;
-
-    font-size: 14px;
-
-    color: #222;
-}
-
-
-/* Legend square */
-
-.legend-color {
-    width: 42px;
-    height: 40px;
-
-    border-radius: 7px;
-
-    flex-shrink: 0;
-}
-
-
-/* Ground floor */
-
-.legend-color.tret {
-    background: #4296cf;
-}
-
-
-/* First floor */
-
-.legend-color.tang1 {
-    background: #f26870;
-}
-
-
-/* Stairs */
-
-.legend-color.stair {
-    background:
-        repeating-linear-gradient(
-            90deg,
-            #f26870 0px,
-            #f26870 1px,
-            white 1px,
-            white 4px
-        );
-
-    border: 1px solid #f26870;
-}
-
 
 /* =========================
    RESPONSIVE MAP
@@ -1250,4 +1173,166 @@ a {
         grid-template-columns: 1fr;
     }
 
+}
+/* =========================
+   MAP CONTROLS
+========================= */
+
+.map-controls {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   BRANCH + FLOOR SELECT
+========================= */
+
+.branch-select,
+.floor-select {
+    position: relative;
+    width: 180px;
+    z-index: 100;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.branch-select-button,
+.floor-select-button {
+    width: 180px;
+    height: 42px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+
+    border: 1.5px solid #2948a5;
+    border-radius: 7px;
+
+    color: #2948a5;
+
+    font-size: 14px;
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+
+/* icon */
+
+.branch-select-button i,
+.floor-select-button i {
+    font-size: 12px;
+
+    transition: transform 0.2s ease;
+}
+
+
+/* xoay icon khi mở */
+
+.branch-select.open .branch-select-button i,
+.floor-select.open .floor-select-button i {
+    transform: rotate(180deg);
+}
+
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.branch-dropdown,
+.floor-dropdown {
+    position: absolute;
+
+    top: 47px;
+    left: 0;
+
+    width: 180px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+    border-radius: 7px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+
+    display: none;
+}
+
+
+/* mở dropdown */
+
+.branch-select.open .branch-dropdown,
+.floor-select.open .floor-dropdown {
+    display: block;
+}
+
+
+/* =========================
+   OPTION
+========================= */
+
+.branch-option,
+.floor-option {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+
+    color: #555;
+
+    cursor: pointer;
+
+    transition: background 0.15s ease,
+                color 0.15s ease;
+}
+
+
+/* hover */
+
+.branch-option:hover,
+.floor-option:hover {
+    background: #f1f4ff;
+
+    color: #2948a5;
+}
+
+
+/* active */
+
+.branch-option.active,
+.floor-option.active {
+    background: #dce6ff;
+
+    color: #2948a5;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   DISABLED FLOOR
+========================= */
+
+.floor-select.disabled {
+    opacity: 0.65;
+}
+
+.floor-select.disabled .floor-select-button {
+    cursor: default;
 }

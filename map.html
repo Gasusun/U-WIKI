@@ -114,7 +114,7 @@
 
 
                 <!-- Community -->
-                <a href="community.php" class="menu-item">
+                <a href="community.html" class="menu-item">
 
                     <i class="fa-solid fa-users"></i>
 
@@ -149,68 +149,76 @@
 
         <!-- ================= CONTENT ================= -->
 
-        <main class="content map-content">
+<main class="content map-content">
 
+    <!-- Bộ chọn cơ sở + tầng -->
+    <div class="map-controls">
 
-            <!-- Map -->
+        <!-- Chọn cơ sở -->
+        <div class="branch-select" id="branchSelect">
 
-            <div class="map-wrapper">
+            <button class="branch-select-button" id="branchButton">
+                <span id="selectedBranch">Cơ sở 1</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
 
-                <img
-                    src="images/map.webp"
-                    alt="Bản đồ trường NTTU"
-                    class="campus-map"
-                >
+            <div class="branch-dropdown" id="branchDropdown">
 
+                <div class="branch-option active"
+                     data-branch="coso1">
+                    Cơ sở 1
+                </div>
 
-                <!-- ================= LEGEND ================= -->
+                <div class="branch-option"
+                     data-branch="coso3">
+                    Cơ sở 3
+                </div>
 
-                <div class="map-legend">
-
-
-                    <!-- Tret -->
-
-                    <div class="legend-item">
-
-                        <div class="legend-color tret"></div>
-
-                        <span>Trệt</span>
-
-                    </div>
-
-
-                    <!-- Tang 1 -->
-
-                    <div class="legend-item">
-
-                        <div class="legend-color tang1"></div>
-
-                        <span>Tầng 1</span>
-
-                    </div>
-
-
-                    <!-- Cau thang -->
-
-                    <div class="legend-item">
-
-                        <div class="legend-color stair"></div>
-
-                        <span>Cầu thang</span>
-
-                    </div>
-
-
+                <div class="branch-option"
+                     data-branch="coso4">
+                    Cơ sở 4
                 </div>
 
             </div>
 
-        </main>
+        </div>
+
+
+        <!-- Chọn tầng -->
+        <div class="floor-select" id="floorSelect">
+
+            <button class="floor-select-button" id="floorButton">
+                <span id="selectedFloor">Tầng trệt</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="floor-dropdown" id="floorDropdown">
+                <!-- JS tự tạo -->
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bản đồ -->
+    <div class="map-wrapper">
+
+        <img
+            src="images/map/CoSo1/TRET.webp"
+            alt="Bản đồ Cơ sở 1 - Tầng trệt"
+            class="campus-map"
+            id="campusMap"
+        >
+
+    </div>
+
+</main>
 
     </div>
 
 </div>
-
+    <script src="map.js"></script>
 </body>
 
 </html>
