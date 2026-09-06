@@ -135,6 +135,31 @@ unset($_SESSION['account_message']);
             font-size: 13px;
         }
 
+        /* Nút đăng xuất ở góc dưới bên phải như giao diện mẫu */
+        .logout-button {
+            position: fixed;
+            right: 22px;
+            bottom: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-width: 74px;
+            height: 28px;
+            padding: 0 12px;
+            border-radius: 4px;
+            background: #ff1f1f;
+            color: #fff;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 500;
+            z-index: 1000;
+        }
+
+        .logout-button:hover {
+            background: #d90000;
+        }
+
     </style>
 </head>
 <body>
@@ -359,6 +384,12 @@ unset($_SESSION['account_message']);
         </main>
 
     </div>
+
+    <!-- Đăng xuất -->
+    <a href="logout.php" class="logout-button">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Đăng xuất
+    </a>
 
 </div>
 

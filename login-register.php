@@ -88,7 +88,9 @@ if (isset($_POST['login'])) {
             } else {
 
                 header("Location: user.php");
+
             }
+
             exit();
         }
     }

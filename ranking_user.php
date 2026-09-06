@@ -4,6 +4,12 @@ session_start();
 
 require_once 'config.php';
 
+// Admin chỉ được xem kết quả, không được tham gia bình chọn.
+if (($_SESSION['role'] ?? '') === 'admin') {
+    header('Location: ranking_results.php');
+    exit();
+}
+
 
 /* =========================================================
    LẤY USER ĐANG ĐĂNG NHẬP
@@ -740,7 +746,6 @@ if ($userId && $activeSession) {
 
 </div>
 
-
 <div class="login-vote-message">
 
     Bạn cần
@@ -784,28 +789,37 @@ include 'ranking_results_content.php';
 
     <a href="ranking_results.php">
 
-        <button
-            class="ranking-btn"
-            type="button"
-        >
+        <button class="ranking-btn" type="button">
             Xem kết quả
         </button>
-
     </a>
 
+    <?php if (
+    ($_SESSION['role'] ?? '') === 'admin'
+): ?>
+
+<a href="ranking_add.php">
+
+    <button
+        class="ranking-btn"
+        type="button"
+    >
+
+        <i class="fa-solid fa-plus"></i>
+
+        Thêm
+
+    </button>
+
+</a>
+<?php endif; ?>
 </div>
 
 
 <?php else: ?>
 
-
-<!-- =====================================================
-     MATCH
-===================================================== -->
-
 <h1 class="ranking-title">
-
-    Rounds of 16 Match
+    Rounds
     <?= intval($currentMatch['match_no']) ?>
 
 </h1>

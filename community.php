@@ -246,23 +246,17 @@ session_start();
 
 
         <div class="header-right">
-
-            <a
-                href="login.php"
-                class="header-link"
-            >
+            <!-- Login -->
+            <a href="login.html" class="header-link">
                 <i class="fa-solid fa-lock"></i>
-                <span>Login</span>
+                <span>login</span>
             </a>
 
-            <a
-                href="login.php"
-                class="header-link"
-            >
-                <i class="fa-solid fa-user-plus"></i>
+            <!-- Sign Up -->
+            <a href="login.html" class="header-link">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 <span>Sign up</span>
             </a>
-
         </div>
 
     </header>

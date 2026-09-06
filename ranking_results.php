@@ -108,7 +108,7 @@ if ($userId) {
 <?php if ($userId): ?>
 
 <a
-    href="account.php"
+    href="<?= (($_SESSION['role'] ?? '') === 'admin') ? 'admin_settings.php' : 'account.php' ?>"
     class="user-avatar-link"
 >
 
@@ -126,18 +126,21 @@ if ($userId) {
 </a>
 
 <?php else: ?>
+       <div class="header-right">
 
-<a
-    href="login.php"
-    class="header-link"
->
+           <!-- Login -->
+            <a href="login.html" class="header-link">
+                <i class="fa-solid fa-lock"></i>
+                <span>login</span>
+            </a>
 
-    <i class="fa-solid fa-right-to-bracket"></i>
+            <!-- Sign Up -->
+            <a href="login.html" class="header-link">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span>Sign up</span>
+            </a>
 
-    <span>Đăng nhập</span>
-
-</a>
-
+        </div>
 <?php endif; ?>
 
 
@@ -158,20 +161,22 @@ if ($userId) {
 <nav class="menu">
 
 
-<a href="<?= $userId ? 'user.php' : 'index.html' ?>" class="menu-item">
+<a href="<?= $userId ? ((($_SESSION['role'] ?? '') === 'admin') ? 'admin.php' : 'user.php') : 'index.html' ?>" class="menu-item">
     <i class="fa-solid fa-house"></i>
     <span>Home</span>
 
 </a>
 
 
+<?php if (($_SESSION['role'] ?? '') !== 'admin'): ?>
 <a href="<?= $userId ? 'map_users.php' : 'map.html' ?>" class="menu-item">
     <i class="fa-solid fa-map"></i>
     <span>Bản đồ trường</span>
 </a>
+<?php endif; ?>
 
 
-<a href="<?= $userId ? 'account.php' : 'login.php' ?>"class="menu-item">
+<a href="<?= $userId ? ((($_SESSION['role'] ?? '') === 'admin') ? 'admin_settings.php' : 'account.php') : 'login.php' ?>" class="menu-item">
     <i class="fa-solid fa-user"></i>
     <span>Accounts</span>
 </a>
@@ -184,7 +189,7 @@ if ($userId) {
 
 
 <a
-    href="<?= $userId ? 'community_users.php' : 'community.php' ?>"
+    href="<?= $userId ? ((($_SESSION['role'] ?? '') === 'admin') ? 'community_admin.php' : 'community_users.php') : 'community.php' ?>"
     class="menu-item"
 >
 
@@ -196,7 +201,7 @@ if ($userId) {
 
 
 <a
-    href="ranking_user.php"
+    href="<?= (($_SESSION['role'] ?? '') === 'admin') ? 'ranking_results.php' : 'ranking_user.php' ?>"
     class="menu-item active"
 >
 
@@ -218,20 +223,36 @@ if ($userId) {
 
 <main class="ranking-content">
 
-
 <div class="ranking-actions">
-
-
 <a href="ranking_results.php">
-    <button class="ranking-btn" type="button"> Kiểm tra kết quả</button>
+
+    <button class="ranking-btn" type="button">
+        Kiểm tra kết quả
+    </button>
+
 </a>
 
 
+<?php if (($_SESSION['role'] ?? '') !== 'admin'): ?>
 <a href="<?= $userId ? 'ranking_user.php' : 'login.php' ?>">
-    <button class="ranking-btn" type="button"> Bình chọn</button>
+    <button class="ranking-btn" type="button">
+        Bình chọn
+    </button>
 </a>
+<?php endif; ?>
 
 
+<?php if (
+    $userId &&
+    ($_SESSION['role'] ?? '') === 'admin'
+): ?>
+
+<a href="ranking_add.php">
+
+    <button class="ranking-btn" type="button"> Thêm </button>
+
+</a>
+<?php endif; ?>
 </div>
 
 

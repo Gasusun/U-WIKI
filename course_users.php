@@ -148,7 +148,6 @@ $avatar = !empty($user['avatar'])
 
                 </a>
 
-
                 <!-- Ranking -->
                 <a href="ranking_user.php" class="menu-item">
 

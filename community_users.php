@@ -472,13 +472,12 @@ $avatar =
 <span>Môn học</span>
 </a>
 
-
 <a href="community_user.php" class="menu-item active">
 <i class="fa-solid fa-users"></i>
 <span>Cộng đồng</span>
 </a>
   
-<a href="ranking_users.php" class="menu-item">
+<a href="ranking_user.php" class="menu-item">
 <i class="fa-solid fa-ranking-star"></i>
 <span>Xếp hạng</span>
 </a>
