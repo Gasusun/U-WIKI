@@ -1,9 +1,23 @@
 <?php
 session_start();
 require_once 'config.php';
-
+/*
+|--------------------------------------------------------------------------
+| KIỂM TRA ĐĂNG NHẬP
+|--------------------------------------------------------------------------
+*/
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
+    exit();
+}
+
+/*
+|--------------------------------------------------------------------------
+| KIỂM TRA QUYỀN ADMIN
+|--------------------------------------------------------------------------
+*/
+if (($_SESSION['role'] ?? '') !== 'admin') {
+    header("Location: user.php");
     exit();
 }
 
@@ -17,9 +31,7 @@ $stmt = $conn->prepare("
 
 $stmt->bind_param("i", $userId);
 $stmt->execute();
-
 $result = $stmt->get_result();
-
 $user = $result->fetch_assoc();
 
 $avatar = !empty($user['avatar'])
@@ -69,7 +81,7 @@ $avatar = !empty($user['avatar'])
             </div>
 
         <!-- User Avatar -->
-        <a href="account.php" class="user-avatar-link">
+        <a href="admin_settings.php" class="user-avatar-link">
         <img src="<?= htmlspecialchars($avatar) ?>"
             alt="Avatar"
             style="
@@ -92,41 +104,26 @@ $avatar = !empty($user['avatar'])
 
             <nav class="menu">
 
-                <a href="#" class="menu-item active">
+                <a href="admin.php" class="menu-item active">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
-
-                <a href="map.html" class="menu-item">
-                    <i class="fa-solid fa-map"></i>
-                    <span>Bản đồ trường</span>
-                </a>
-
-                <a href="account.php" class="menu-item">
+                <a href="admin_settings.php" class="menu-item">
                     <i class="fa-solid fa-user"></i>
                     <span>Accounts</span>
                 </a>
-
-                <a href="course.html" class="menu-item">
+                <a href="course_users.php" class="menu-item">
                     <i class="fa-solid fa-book-open"></i>
                     <span>Môn học</span>
                 </a>
-
-                <a href="community.html" class="menu-item">
+                <a href="community_admin.php" class="menu-item">
                     <i class="fa-solid fa-users"></i>
                     <span>Cộng đồng</span>
                 </a>
-
-                <a href="#" class="menu-item">
+                <a href="ranking_results.php" class="menu-item">
                     <i class="fa-solid fa-ranking-star"></i>
                     <span>Xếp hạng</span>
                 </a>
-
-                <a href="#" class="menu-item">
-                    <i class="fa-solid fa-gear"></i>
-                    <span>Setting</span>
-                </a>
-
             </nav>
 
         </aside>
