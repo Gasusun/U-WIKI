@@ -423,7 +423,10 @@ Xóa
 </main>
 
 </div>
-
+    <a href="logout.php" class="logout-button">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Đăng xuất
+    </a>
 </div>
 
 </body>
