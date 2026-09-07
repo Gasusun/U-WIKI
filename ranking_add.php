@@ -410,6 +410,11 @@ while (
     <span>Accounts</span>
 </a>
 
+<a href="courses.php" class="menu-item">
+    <i class="fa-solid fa-book-open"></i>
+    <span>Môn học</span>
+</a>
+
 <a href="community_admin.php" class="menu-item">
     <i class="fa-solid fa-users"></i>
     <span>Cộng đồng</span>

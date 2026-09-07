@@ -247,13 +247,13 @@ session_start();
 
         <div class="header-right">
             <!-- Login -->
-            <a href="login.html" class="header-link">
+            <a href="login.php" class="header-link">
                 <i class="fa-solid fa-lock"></i>
                 <span>login</span>
             </a>
 
             <!-- Sign Up -->
-            <a href="login.html" class="header-link">
+            <a href="login.php" class="header-link">
                 <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 <span>Sign up</span>
             </a>
@@ -286,7 +286,7 @@ session_start();
                     <span>Accounts</span>
                 </a>
 
-                <a href="course.html" class="menu-item">
+                <a href="courses.php" class="menu-item">
                     <i class="fa-solid fa-book-open"></i>
                     <span>Môn học</span>
                 </a>

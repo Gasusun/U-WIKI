@@ -543,40 +543,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </a>
 
+<a href="courses.php" class="menu-item">
+<i class="fa-solid fa-book-open"></i>
+<span>Môn học</span>
+</a>
 
-<a
-    href="community_admin.php"
-    class="menu-item"
->
-
+<a href="community_admin.php" class="menu-item">
 <i class="fa-solid fa-users"></i>
-
 <span>Cộng đồng</span>
-
 </a>
 
 
-<a
-    href="ranking_results.php"
-    class="menu-item"
->
-
+<a href="ranking_results.php" class="menu-item">
 <i class="fa-solid fa-ranking-star"></i>
-
 <span>Xếp hạng</span>
-
 </a>
 
 
-<a
-    href="admin_settings.php"
-    class="menu-item active"
->
-
+<a href="admin_settings.php" class="menu-item active">
 <i class="fa-solid fa-gear"></i>
-
 <span>Setting</span>
-
 </a>
 
 </nav>
@@ -746,13 +732,8 @@ Lưu thay đổi
 </button>
 
 
-<a
-    href="admin_settings.php"
-    class="back-btn"
->
-
+<a href="admin_settings.php" class="back-btn">
 Quay lại
-
 </a>
 
 

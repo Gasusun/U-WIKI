@@ -181,7 +181,7 @@ if ($userId) {
 </a>
 
 
-<a href="<?= $userId ? 'course_users.php' : 'course.html' ?>" class="menu-item">
+<a href="<?= $userId ? 'courses.php' : 'course.html' ?>" class="menu-item">
     <i class="fa-solid fa-book-open"></i>
     <span>Môn học</span>
 </a>

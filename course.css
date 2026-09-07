@@ -1,0 +1,469 @@
+
+/* =========================================================
+   DATABASE COURSE PAGE
+========================================================= */
+
+.course-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-add-button,
+.edit-button,
+.submit-button {
+    background: #3564ff;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.admin-add-button:hover,
+.edit-button:hover,
+.submit-button:hover {
+    background: #294fcf;
+}
+
+.course-card {
+    position: relative;
+}
+
+.mini-risk {
+    display: flex;
+    gap: 3px;
+    margin-top: 12px;
+}
+
+.mini-risk span {
+    width: 28px;
+    height: 5px;
+    border-radius: 1px;
+    background: #d9d9d9;
+}
+
+.mini-risk.risk-1-2 span.active {
+    background: #009f4f;
+}
+
+.mini-risk.risk-3 span.active {
+    background: #f0b400;
+}
+
+.mini-risk.risk-4 span.active {
+    background: #e53935;
+}
+
+.admin-card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 9px;
+}
+
+.admin-card-actions a,
+.admin-card-actions button {
+    border: 0;
+    background: transparent;
+    color: #777;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.admin-card-actions a:hover {
+    color: #3564ff;
+}
+
+.admin-card-actions button:hover {
+    color: #e53935;
+}
+
+.admin-card-actions form {
+    margin: 0;
+}
+
+.course-empty {
+    grid-column: 1 / -1;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 50px;
+    text-align: center;
+    color: #999;
+}
+
+.course-empty i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   COURSE DETAIL
+========================================================= */
+
+.course-detail-content {
+    flex: 1;
+    min-width: 0;
+    background: #f5f6f8;
+    padding: 18px 24px 30px;
+    overflow-y: auto;
+}
+
+.detail-topbar {
+    max-width: 980px;
+    margin: 0 auto 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #3564ff;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    padding: 8px 11px;
+}
+
+.detail-admin-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-admin-actions form {
+    margin: 0;
+}
+
+.delete-button,
+.cancel-button {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #777;
+    border-radius: 5px;
+    padding: 8px 11px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.delete-button {
+    color: #d33;
+}
+
+.course-detail-card {
+    max-width: 980px;
+    margin: 0 auto 18px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.04);
+    padding: 20px 24px;
+}
+
+.detail-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.detail-course-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 9px;
+    background: #eef2ff;
+    color: #3564ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-course-icon i {
+    font-size: 21px;
+}
+
+.detail-title-row h1 {
+    color: #222;
+    font-size: 21px;
+    margin-bottom: 4px;
+}
+
+.detail-title-row p {
+    color: #999;
+    font-size: 12px;
+}
+
+.risk-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 8px 0 22px;
+}
+
+.risk-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #222;
+}
+
+.risk-bar {
+    display: flex;
+    gap: 3px;
+}
+
+.risk-segment {
+    display: block;
+    width: 52px;
+    height: 16px;
+    padding: 0;
+    border: 0;
+    border-radius: 1px;
+    background: #d8d8d8;
+}
+
+.risk-segment.active.risk-level-1-2 {
+    background: #009f4f;
+}
+
+.risk-segment.active.risk-level-3 {
+    background: #f0b400;
+}
+
+.risk-segment.active.risk-level-4 {
+    background: #e53935;
+}
+
+.editable-risk .risk-segment {
+    cursor: pointer;
+}
+
+.editable-risk .risk-segment:hover {
+    opacity: .78;
+}
+
+.risk-value {
+    font-size: 12px;
+    color: #777;
+}
+
+.risk-editor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.save-risk-button {
+    border: 0;
+    background: #3564ff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.save-risk-button:hover {
+    background: #294fcf;
+}
+
+.detail-section {
+    margin-top: 20px;
+}
+
+.detail-section h2 {
+    color: #2b2b2b;
+    font-size: 17px;
+    margin-bottom: 9px;
+}
+
+.detail-section ul {
+    padding-left: 19px;
+}
+
+.detail-section li {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.55;
+    margin-bottom: 3px;
+}
+
+.resource-card {
+    padding-bottom: 22px;
+}
+
+.resource-card a {
+    color: #6d6d6d;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+
+/* =========================================================
+   ADMIN COURSE FORM
+========================================================= */
+
+.form-topbar {
+    max-width: 980px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-topbar h1 {
+    font-size: 22px;
+    color: #222;
+}
+
+.form-errors {
+    max-width: 980px;
+    margin: 0 auto 15px;
+    background: #fff1f1;
+    color: #c33;
+    border: 1px solid #f0cccc;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 12px;
+}
+
+.course-form {
+    max-width: 980px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 7px;
+    padding: 22px 24px;
+}
+
+.course-form label,
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #444;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.course-form input[type="text"],
+.course-form input[type="url"],
+.course-form textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 11px;
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.course-form textarea {
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.course-form input:focus,
+.course-form textarea:focus {
+    border-color: #8aa1ff;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 18px;
+}
+
+.form-risk {
+    margin-top: 2px;
+}
+
+.form-field small {
+    color: #888;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-top: 6px;
+}
+
+.cancel-button {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-header-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .course-search {
+        flex: 1;
+        min-width: 220px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .course-content,
+    .course-detail-content {
+        padding: 18px 12px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .course-header-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .course-search {
+        width: 100%;
+    }
+
+    .detail-topbar,
+    .form-topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .risk-segment {
+        width: 42px;
+    }
+
+    .course-detail-card {
+        padding: 17px;
+    }
+}

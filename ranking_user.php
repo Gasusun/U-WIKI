@@ -637,7 +637,7 @@ if ($userId && $activeSession) {
 
 
 <a
-    href="<?= $userId ? 'course_users.php' : 'course.html' ?>"
+    href="<?= $userId ? 'courses.php' : 'course.html' ?>"
     class="menu-item"
 >
 
