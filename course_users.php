@@ -157,16 +157,6 @@ $avatar = !empty($user['avatar'])
 
                 </a>
 
-
-                <!-- Setting -->
-                <a href="#" class="menu-item">
-
-                    <i class="fa-solid fa-gear"></i>
-
-                    <span>Setting</span>
-
-                </a>
-
             </nav>
 
         </aside>

@@ -401,29 +401,23 @@ while (
 <nav class="menu">
 
 <a href="admin.php" class="menu-item">
-
     <i class="fa-solid fa-house"></i>
-
     <span>Home</span>
-
 </a>
 
+<a href="admin_settings.php" class="menu-item active">
+    <i class="fa-solid fa-user"></i>
+    <span>Accounts</span>
+</a>
 
 <a href="community_admin.php" class="menu-item">
-
     <i class="fa-solid fa-users"></i>
-
     <span>Cộng đồng</span>
-
 </a>
 
-
 <a href="ranking_results.php" class="menu-item active">
-
     <i class="fa-solid fa-ranking-star"></i>
-
     <span>Xếp hạng</span>
-
 </a>
 
 
@@ -436,13 +430,7 @@ while (
 
 <div class="add-box">
 
-<h1>
-
-<i class="fa-solid fa-user-plus"></i>
-
-Thêm giáo viên
-
-</h1>
+<h1>Thêm giáo viên</h1>
 
 
 <?php if ($message !== ''): ?>
@@ -530,12 +518,9 @@ Danh sách giáo viên
 
 <th>Tên</th>
 
-<th>Trạng thái</th>
-
 </tr>
 
 </thead>
-
 
 <tbody>
 
@@ -549,7 +534,6 @@ Danh sách giáo viên
 
 </td>
 
-
 <td>
 
 <img
@@ -561,35 +545,11 @@ Danh sách giáo viên
 
 </td>
 
-
 <td>
 
 <?= htmlspecialchars(
     $teacher['name']
 ) ?>
-
-</td>
-
-
-<td>
-
-<?php if ($teacher['active']): ?>
-
-<span class="status-active">
-
-Đang sử dụng
-
-</span>
-
-<?php else: ?>
-
-<span class="status-off">
-
-Đã tắt
-
-</span>
-
-<?php endif; ?>
 
 </td>
 

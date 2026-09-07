@@ -207,11 +207,8 @@ while (
 </a>
 
 <a href="course.html" class="menu-item">
-
 <i class="fa-solid fa-book-open"></i>
-
 <span>Môn học</span>
-
 </a>
 
 
@@ -421,7 +418,6 @@ Xóa
 </div>
 
 </main>
-
 </div>
     <a href="logout.php" class="logout-button">
         <i class="fa-solid fa-right-from-bracket"></i>
