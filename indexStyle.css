@@ -534,6 +534,117 @@ a {
 }
 
 
+/* =========================
+   MAP CONTROLS
+========================= */
+
+.map-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.branch-select,
+.floor-select {
+    position: relative;
+    min-width: 180px;
+}
+
+.branch-select-button,
+.floor-select-button {
+    width: 100%;
+    height: 42px;
+
+    background: #ffffff;
+    border: 1px solid #dfe3ef;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 14px 0 16px;
+
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.branch-select-button:hover,
+.floor-select-button:hover {
+    border-color: #b9c7f5;
+    box-shadow: 0 4px 10px rgba(53, 100, 255, 0.08);
+}
+
+.branch-select-button i,
+.floor-select-button i {
+    font-size: 12px;
+    color: #5a6476;
+}
+
+.branch-dropdown,
+.floor-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    background: #ffffff;
+    border: 1px solid #e7ebf3;
+    border-radius: 10px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+
+    display: none;
+    z-index: 30;
+    overflow: hidden;
+}
+
+.branch-select.open .branch-dropdown,
+.floor-select.open .floor-dropdown {
+    display: block;
+}
+
+.branch-option,
+.floor-option {
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #2d3748;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.branch-option:hover,
+.floor-option:hover {
+    background: #f4f7ff;
+    color: #1d4ed8;
+}
+
+.branch-option.active,
+.floor-option.active {
+    background: #edf3ff;
+    color: #1a56db;
+    font-weight: 700;
+}
+
+.floor-select.disabled .floor-select-button {
+    background: #f3f5f9;
+    color: #7d8699;
+    cursor: default;
+    opacity: 0.8;
+}
+
+.floor-select.disabled .floor-select-button i {
+    color: #97a1b3;
+}
+
+
 /* Campus map */
 
 .campus-map {
